@@ -1,0 +1,19 @@
+class Solution {
+    public boolean isPalindrome(int x) {
+        int orgNum = x;
+        int digit =0;
+        int revNum = 0;
+        
+        while(x != 0){
+            digit = x % 10;
+            x /= 10;
+            revNum = revNum * 10 + digit;
+        }
+        if(revNum == Math.abs(orgNum))
+        {return true;}
+
+        else{ 
+            return false;
+        }
+    }
+}
